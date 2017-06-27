@@ -10,7 +10,19 @@ html, body {
 
 body {
   padding: 80px;
-  background: #ffffff; }
+  background: url("../img/desk.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; }
+
+.border {
+  border: 80px solid #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 ul.buttons {
   list-style-type: none;
@@ -91,7 +103,6 @@ nav.navigation {
 .container {
   width: 100%;
   height: 100%;
-  background: url("../img/desk.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -114,7 +125,7 @@ nav.navigation {
 .contact {
   width: 40%;
   height: 100%;
-  background: #ecf0f1;
+  background: #9b59b6;
   position: fixed;
   left: calc(-40% - 20vw);
   top: 0;
@@ -123,7 +134,8 @@ nav.navigation {
   .contact .contact-form {
     width: 100%;
     height: 100%;
-    padding: 10%; }
+    padding: 10%;
+    color: #ffffff; }
     .contact .contact-form .close {
       font-size: 40px;
       cursor: pointer; }
@@ -142,7 +154,13 @@ nav.navigation {
     position: absolute;
     top: 0;
     right: -20vw;
-    border-top: 100vh solid #ecf0f1;
+    border-top: 100vh solid #9b59b6;
     border-right: 20vw solid transparent; }
   .contact.open {
     left: 0; }
+
+.content-section {
+  background: #ffffff;
+  padding: 5%;
+  margin: 5%;
+  width: auto; }
