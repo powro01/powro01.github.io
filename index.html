@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
 </head>
 <body>
-    <ul class="buttons">
-        <li>
+    <ul class="buttons" id="buttons">
+        <li id="menuButton">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -33,13 +33,25 @@
             <span class="fa fa-phone phone"></span>
         </li>
     </ul>
-    <nav class="navigation">
-        
+    <nav class="navigation" id="navigation">
+        <ul class="navigation-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">My skills</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </nav>
     <main class="container">
-        <section class="top-slider">
-            <h1>Kamil Powroźnik</h1>
+        <section class="top-slider siema">
+            <div class="slide">
+                <h1>Kamil Powroźnik</h1>
+            </div>
         </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="js/siema.min.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 </html>

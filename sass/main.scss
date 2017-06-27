@@ -18,10 +18,12 @@ body {
 ul.buttons {
     list-style-type: none;
     position: fixed;
-    padding-top: 20px;
-    padding-right: 20px;
+    height: 100%;
+    background: #ffffff;
+    padding: 20px;
     top: 0;
     right: 0;
+    transition: 1s;
     
     li {
         width: 40px;
@@ -38,6 +40,7 @@ ul.buttons {
             height: 4px;
             margin-bottom: 4px;
             background: #111111;
+            transition: 1s;
         }
 
         &:hover {
@@ -62,6 +65,14 @@ ul.buttons {
             }
         }
     }
+
+    &.open {
+        right: 40%;
+
+        .bar {
+            transform: rotate(30deg);
+        }
+    }
 }
 
 nav.navigation {
@@ -71,6 +82,46 @@ nav.navigation {
     position: fixed;
     top: 0;
     right: -40%;
+    padding: 10%;
+    transition: 1s;
+
+    ul.navigation-list {
+        width: 100%;
+        height: 100%;
+
+        li {
+            display: block;
+            a {
+                display: block;
+                font-size: 2em;
+                color: inherit;
+                text-decoration: none;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    bottom: 0;
+                    left: 0;
+                    border-bottom: 2px solid #111111;
+                    transition: 0.5s;
+                }
+
+                &:hover{
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &.open {
+        right: 0;
+    }
 }
 
 .container {
@@ -86,10 +137,6 @@ nav.navigation {
 .top-slider {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
     h1 {
         padding: 20px;
@@ -97,5 +144,13 @@ nav.navigation {
         font-size: 3em;
         color: #111111;
         text-transform: uppercase;
+    }
+
+    .slide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
