@@ -20,7 +20,8 @@ ul.buttons {
   padding: 20px;
   top: 0;
   right: 0;
-  transition: 1s; }
+  transition: 1s;
+  z-index: 999999; }
   ul.buttons li {
     width: 40px;
     height: 40px;
@@ -59,7 +60,8 @@ nav.navigation {
   top: 0;
   right: -40%;
   padding: 10%;
-  transition: 1s; }
+  transition: 1s;
+  z-index: 999999; }
   nav.navigation ul.navigation-list {
     width: 100%;
     height: 100%; }
@@ -97,16 +99,50 @@ nav.navigation {
 
 .top-slider {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
   .top-slider h1 {
     padding: 20px;
     background: #ffffff;
     font-size: 3em;
     color: #111111;
     text-transform: uppercase; }
-  .top-slider .slide {
+
+.contact {
+  width: 40%;
+  height: 100%;
+  background: #ecf0f1;
+  position: fixed;
+  left: calc(-40% - 20vw);
+  top: 0;
+  transition: 1s;
+  z-index: 999998; }
+  .contact .contact-form {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+    padding: 10%; }
+    .contact .contact-form .close {
+      font-size: 40px;
+      cursor: pointer; }
+      .contact .contact-form .close:hover {
+        animation: round;
+        animation-duration: 1s;
+        animation-iteration-count: 1; }
+
+@keyframes round {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+  .contact::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -20vw;
+    border-top: 100vh solid #ecf0f1;
+    border-right: 20vw solid transparent; }
+  .contact.open {
+    left: 0; }
